@@ -8,6 +8,10 @@
   font-weight: 500;
 }
 
+.logo {
+  width: 7.2rem;
+}
+
 .nav-links {
   display: flex;
   align-items: center;

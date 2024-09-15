@@ -6,7 +6,7 @@ import "./navbar.css";
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
 
-  // Initialize theme based on localStorage
+  // Initialize theme based on localStorage 
   useEffect(() => {
     const selectedTheme = localStorage.getItem("selectedTheme") || "light";
     setTheme(selectedTheme);
@@ -19,11 +19,16 @@ const Navbar = () => {
 
   return (
     <nav className="navbarSection container">
-      <div className="logo">
-        <img
-          src={theme === "dark" ? "./BrandLogoDark.png" : "./BrandLogoLight.png"}
-          alt="Taikonz Brand Logo"
-        />
+      <div>
+        <a href="/">
+          <img
+            src={
+              theme === "dark" ? "./BrandLogoDark.png" : "./BrandLogoLight.png"
+            }
+            alt="Taikonz Brand Logo"
+            className="logo"
+          />
+        </a>
       </div>
       <ul className="nav-links">
         <li>
@@ -39,8 +44,8 @@ const Navbar = () => {
           <a href="#launchpad">Launchpad</a>
         </li>
         <div className="nav-buttons">
-          <Button btnText="Login" variant="primary" />
-          <Button btnText="Register" variant="secondary" />
+          <Button btnText="Login" variant="secondary" />
+          <Button btnText="Register" variant="primary" />
         </div>
         <DarkMode onThemeChange={toggleTheme} />
       </ul>

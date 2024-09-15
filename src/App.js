@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
      <Navbar />
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* <WhyUsSection />
       <StatsSection />
       <FooterSection /> */}
