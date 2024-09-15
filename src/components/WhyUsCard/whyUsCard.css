@@ -1,0 +1,55 @@
+.WhyUsCardSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2.4rem;
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+  border: 2px solid #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.WhyUsCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.WhyUsCardIcon {
+  width: 8rem;
+  height: auto;
+  margin-bottom: 2.4rem;
+}
+
+.WhyUsCardHeading {
+  margin-bottom: 1.2rem;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.WhyUsCardPara {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .WhyUsCardSection {
+    padding: 1.6rem;
+  }
+
+  .WhyUsCardIcon {
+    width: 6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .WhyUsCardHeading {
+    font-size: 1.6rem;
+  }
+
+  .WhyUsCardPara {
+    font-size: 1.2rem;
+  }
+}

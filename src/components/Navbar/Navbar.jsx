@@ -1,54 +1,62 @@
-import { useState, useEffect } from "react";
-import Button from "../Button/Button";
-import DarkMode from "../DarkMode/DarkMode";
-import "./navbar.css";
+import { useContext, useState } from 'react';
+import { ThemeContext } from '../../ThemeContext';
+import Button from '../Button/Button';
+import DarkMode from '../DarkMode/DarkMode';
+import './navbar.css';
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+  const { theme } = useContext(ThemeContext);
+  const [isMenuOpen, setMenuOpen] = useState(false); // State for mobile menu
 
-  // Initialize theme based on localStorage 
-  useEffect(() => {
-    const selectedTheme = localStorage.getItem("selectedTheme") || "light";
-    setTheme(selectedTheme);
-  }, []);
-
-  // Toggle theme handler to sync with the DarkMode component
-  const toggleTheme = (newTheme) => {
-    setTheme(newTheme);
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="navbarSection container">
-      <div>
-        <a href="/">
+    <nav className='navbarSection container'>
+      <div className='logoContainer'>
+        <a href='/'>
           <img
             src={
-              theme === "dark" ? "./BrandLogoDark.png" : "./BrandLogoLight.png"
+              theme === 'dark' ? './BrandLogoDark.png' : './BrandLogoLight.png'
             }
-            alt="Taikonz Brand Logo"
-            className="logo"
+            alt='Taikonz Brand Logo'
+            className='logo'
           />
         </a>
+        <button className='hamburgerMenu' onClick={toggleMenu}>
+          &#9776;
+        </button>
+        <DarkMode className='darkModeToggle' />
       </div>
-      <ul className="nav-links">
-        <li>
-          <a href="#p2p">P2P</a>
-        </li>
-        <li>
-          <a href="#trade">Trade</a>
-        </li>
-        <li>
-          <a href="#staking">Staking</a>
-        </li>
-        <li>
-          <a href="#launchpad">Launchpad</a>
-        </li>
-        <div className="nav-buttons">
-          <Button btnText="Login" variant="secondary" />
-          <Button btnText="Register" variant="primary" />
+      <div className={`navbarLinksContainer ${isMenuOpen ? 'open' : ''}`}>
+        <ul className='nav-links'>
+          <li>
+            <a className='navLink' href='#p2p'>
+              P2P
+            </a>
+          </li>
+          <li>
+            <a className='navLink' href='#trade'>
+              Trade
+            </a>
+          </li>
+          <li>
+            <a className='navLink' href='#staking'>
+              Staking
+            </a>
+          </li>
+          <li>
+            <a className='navLink' href='#launchpad'>
+              Launchpad
+            </a>
+          </li>
+        </ul>
+        <div className='nav-buttons'>
+          <Button btnText='Login' variant='secondary' />
+          <Button btnText='Register' variant='primary' />
         </div>
-        <DarkMode onThemeChange={toggleTheme} />
-      </ul>
+      </div>
     </nav>
   );
 };

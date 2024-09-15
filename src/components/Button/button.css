@@ -1,28 +1,36 @@
+/* Base Button Styles */
 .btn {
   padding: 0.5rem 2.4rem;
   border: transparent;
-  border-radius: 1.2rem;
+  border-radius: 12px;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 44px;
+  max-height: 44px;
+  max-width: max-content;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-/* Primary Button Styles*/
-.btn.primary {
-  background-color: var(--taikonz-primary, #553bf5);
+/* Primary Button Styles */
+.btn--primary {
+  background-color: var(--taikonz-primary, #4f41a4);
 }
 
-.btn.primary:hover {
+.btn--primary:hover {
   background-color: var(--primary-color-dark, #0056b3);
+  transform: scale(1.05);
 }
 
-/* Secondary Button Styles*/
-.btn.secondary {
+/* Secondary Button Styles */
+.btn--secondary {
   background-color: inherit;
-  border: 1px solid red;
+  color: var(--taikonz-primary, #4f41a4);
+  border: 1px solid var(--taikonz-primary, #4f41a4);
 }
 
-.btn.secondary:hover {
-  background-color: inherit;
+.btn--secondary:hover {
+  background-color: var(--taikonz-primary, #553bf5);
+  color: #fff;
+  transform: scale(1.05);
 }

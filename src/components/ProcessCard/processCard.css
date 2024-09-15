@@ -1,0 +1,40 @@
+.processCardContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  background-color: var(--bg-color);
+  width: max-content;
+  border: 2px solid #fff;
+  border-radius: 1.6rem;
+  padding: 2rem;
+}
+
+.processCardContainer > p {
+  font-size: 11rem;
+  font-weight: 800;
+  color: var(--taikonz-primary);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .processCardContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.6rem;
+  }
+
+  .processCardContainer > p {
+    font-size: 6rem;
+  }
+
+  .ProcessCardTextContent > h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .ProcessCardTextContent > p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

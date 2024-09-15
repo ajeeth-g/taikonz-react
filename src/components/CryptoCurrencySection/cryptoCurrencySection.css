@@ -1,0 +1,59 @@
+.CryptoCurrencySection {
+  background-color: var(--bg-inverse-color);
+  padding: 3.4rem 7.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2.4rem;
+}
+
+/* Icon styles */
+.CryptoCurrencyIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19.6rem;
+  background-color: var(--bg-inverse-color);
+  cursor: pointer;
+}
+
+.CryptoCurrencyIcon svg {
+  font-size: 2.4rem;
+}
+
+.iconRight {
+  transform: rotate(180deg);
+}
+
+/* Card container styles */
+.CryptoCurrencyCardContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--bg-inverse-color);
+  width: 100%;
+  column-gap: 2.4rem;
+}
+
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+  .CryptoCurrencySection {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+
+  .CryptoCurrencyIcon {
+    width: 10rem;
+    font-size: 1.8rem;
+    display: none;
+  }
+
+  .CryptoCurrencyIcon svg {
+    font-size: 1.8rem;
+  }
+
+  .CryptoCurrencyCardContainer {
+    flex-direction: column;
+    row-gap: 1.6rem;
+  }
+}

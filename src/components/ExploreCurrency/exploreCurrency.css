@@ -1,0 +1,45 @@
+.exploreCurrencyContainer {
+  display: flex;
+  padding: 4.8rem 7.2rem;
+  gap: 2.4rem;
+  background-color: var(--bg-color);
+}
+
+.exploreCurrencyTextContent {
+  width: 50%;
+}
+
+.exploreCurrencyTextContent > h2 {
+  margin-bottom: 5.6rem;
+}
+
+.exploreCurrencyStats {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .exploreCurrencyContainer {
+    padding: 2.4rem;
+    flex-direction: column;
+  }
+
+  .exploreCurrencyTextContent {
+    width: 100%;
+  }
+
+  .exploreCurrencyTextContent > h2 {
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+  }
+
+  .exploreCurrencySftats {
+    row-gap: 1.6rem;
+  }
+
+  .exploreCurrencyStats {
+    width: 100%;
+  }
+}

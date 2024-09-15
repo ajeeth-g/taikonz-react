@@ -1,7 +1,7 @@
-import "./button.css";
+import './button.css';
 
-const Button = ({ btnText, variant = "primary" }) => {
-  return <button className={`btn ${variant}`}>{btnText}</button>;
+const Button = ({ btnText, variant }) => {
+  return <button className={`btn btn--${variant}`}>{btnText}</button>;
 };
 
 export default Button;

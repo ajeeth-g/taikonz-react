@@ -1,0 +1,90 @@
+.exploreCurrencyStatsContainer {
+  display: flex;
+  padding: 2rem 2.4rem;
+  background-color: var(--bg-inverse-color);
+  border-radius: 1.6rem;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+}
+
+.exploreCurrencyStatsRight {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.exploreCurrencyStatsImage {
+  width: 2.4rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+.exploreCurrencyStatsText {
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.exploreCurrencyStatsText > p:first-child {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.exploreCurrencyStatsText > p:nth-child(2) {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+.exploreCurrencyStatsPercentage {
+  display: flex;
+  column-gap: 0.8rem;
+  align-items: center;
+}
+
+.exploreCurrencyStatsIcon > svg {
+  font-size: 2.4rem;
+  color: #21a75f;
+}
+
+.exploreCurrencyStatsPercentage > p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #21a75f;
+}
+
+@media (max-width: 768px) {
+  .exploreCurrencyStatsContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.6rem;
+  }
+
+  .exploreCurrencyStatsRight {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    column-gap: 0;
+  }
+
+  .exploreCurrencyStatsText > p:first-child {
+    font-size: 2rem;
+  }
+
+  .exploreCurrencyStatsText > p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+
+  .exploreCurrencyStatsPercentage {
+    margin-top: 1.6rem;
+  }
+
+  .exploreCurrencyStatsIcon > svg {
+    font-size: 2rem;
+  }
+
+  .exploreCurrencyStatsPercentage > p {
+    font-size: 2rem;
+  }
+}

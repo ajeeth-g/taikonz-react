@@ -1,30 +1,32 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  transition: all 0.2s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.1s ease-in-out;
   color: var(--font-color);
-  background-color: var(--bg-color);
 }
 
 html {
-  font: 62.5%;
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 :root {
   --taikonz-primary: #4f41a4;
   --font-color: #b3b3b3;
-  --bg-color: #131313;
+  --bg-color: #f8f8f8;
+  --bg-inverse-color: #f3f3f3;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --taikonz-primary: #4f41a4;
   --font-color: #b3b3b3;
   --bg-color: #131313;
+  --bg-inverse-color: #181818;
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   --taikonz-primary: #553bf5;
   --font-color: #131313;
   --bg-color: #f8f8f8;
@@ -39,16 +41,44 @@ ul {
   list-style-type: none;
 }
 
+/* Font sizes for desktop */
 h1 {
-  font-size: 6.4rem;
+  font-size: 6.4rem; /* 64px */
+  letter-spacing: 3%;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.4rem; /* 24px */
   font-weight: 400;
   letter-spacing: 0.18px;
 }
 
+h3 {
+  font-size: 3.2rem; /* 32px */
+}
+
+h4 {
+  font-size: 2.1rem; /* 21px */
+  font-weight: 500;
+}
+
 .container {
-  padding: 0 7.2rem;
+  padding: 0 7.2rem; /* 72px */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem; /* 40px */
+    letter-spacing: 2%;
+  }
+
+  h2 {
+    font-size: 1.8rem; /* 18px */
+    letter-spacing: 0.15px;
+  }
+
+  .container {
+    padding: 0 2rem; /* 20px */
+  }
 }
