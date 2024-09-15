@@ -1,0 +1,25 @@
+.navbarSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  height: 100px;
+  max-height: 100px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 0 2.4rem;
+  line-height: 100px;
+}
+
+.nav-buttons {
+  display: flex;
+  column-gap: 2.4rem;
+  align-items: center;
+}

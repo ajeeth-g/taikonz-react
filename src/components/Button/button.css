@@ -1,0 +1,30 @@
+/* button.css */
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: transparent;
+    border-radius: 4px;
+    color: #fff; 
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Primary Button Styles*/
+  .btn.primary {
+    background-color: var(--taikonz-primary, #4f41a4); /* Default to blue if not defined */
+  }
+  
+  .btn.primary:hover {
+    background-color: var(--primary-color-dark, #0056b3); /* Darker shade for hover */
+  }
+  
+  /* Secondary Button Styles*/
+  .btn.secondary {
+    background-color: var(--secondary-color, #6c757d); /* Default to gray if not defined */
+  }
+  
+  .btn.secondary:hover {
+    background-color: var(--secondary-color-dark, #5a6268); /* Darker shade for hover */
+  }
+  

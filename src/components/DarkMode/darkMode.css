@@ -1,0 +1,18 @@
+.darkModeButton {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.darkModeButton::before {
+  content: "🌙";
+  color: #fff;
+  font-size: 1rem;
+}
+
+body[data-theme="dark"] .darkModeButton::before {
+  content: "☀️";
+}

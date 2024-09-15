@@ -1,0 +1,22 @@
+.heroSection{
+    display: flex;
+    align-items: center;
+   
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5.6rem;
+}
+
+.heroContent--text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+}
+
+.heroImage{
+    max-width: 53.072rem;
+    max-height: 48.271rem;
+}
