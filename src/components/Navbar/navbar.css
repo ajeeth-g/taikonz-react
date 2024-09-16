@@ -43,6 +43,11 @@
   list-style: none;
 }
 
+.navLink:hover {
+  text-decoration: underline;
+  color: var( --taikonz-primary);
+}
+
 .nav-buttons {
   display: flex;
   gap: 1.6rem;

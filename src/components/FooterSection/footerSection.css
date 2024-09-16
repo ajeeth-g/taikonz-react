@@ -68,7 +68,7 @@
 
 /* Hover effect for links */
 .footerColumn ul li a:hover {
-  color: var(--accent-color);
+  color: var( --taikonz-primary);
   text-decoration: underline;
 }
 
